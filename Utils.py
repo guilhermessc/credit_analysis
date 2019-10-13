@@ -23,10 +23,10 @@ import matplotlib.pyplot as plt
 def shuffle_array(array):
    np.random.shuffle(array)
    
-def load_database(filename = 'data/BASE-PREPROCESSED(TRAIN).gz'):
+def load_database(filename = 'data/BASE-PREPROCESSED(TRAIN).gz', sep = ','):
    start_time=datetime.datetime.now()
    
-   data = pd.read_table(filename)
+   data = pd.read_csv(filename, sep=sep)
    data.drop_duplicates(inplace=True)
    
    end_time=datetime.datetime.now()
@@ -62,21 +62,36 @@ def replicate_shuffle_merge(major_class_samples, minor_class_samples):
    return dataset
 
 def get_input_output(database):
+   start_time=datetime.datetime.now()
+   
    x = database[:, 1:]
    y = database[:, 0]
+   
+   end_time=datetime.datetime.now()
+   print("input-output separation time taken - {}".format(end_time-start_time))
    return (x, y)
    
 def separate_train_test_eval(X, Y):
-   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1/4, 
-                                                    random_state=42, stratify=y)
-   X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=1/3, 
-                                                  random_state=42, stratify=y_train)
+   start_time=datetime.datetime.now()
+   
+   X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=1/4, random_state=42)#, stratify=Y)
+   X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=1/3, random_state=42)#, stratify=y_train)
+   
+   end_time=datetime.datetime.now()
+   print("train-test-eval separation time taken - {}".format(end_time-start_time))
    return (X_train, y_train, X_test, y_test, X_val, y_val)
    
-def normalize(database):
+def normalize(train, test, val):
+   start_time=datetime.datetime.now()
+   
    scaler = StandardScaler()
-   db = scaler.fit_transform(database)
-   return db
+   X_train = scaler.fit_transform(train)
+   X_val = scaler.transform(val)
+   X_test = scaler.transform(test)
+   
+   end_time=datetime.datetime.now()
+   print("normalization time taken - {}".format(end_time-start_time))
+   return X_train, X_val, X_test
 
 
 ## Provided utilities functions
