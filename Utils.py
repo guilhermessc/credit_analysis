@@ -7,7 +7,7 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.callbacks import EarlyStopping
 
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, MaxAbsScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
@@ -19,6 +19,7 @@ from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier,
 import scikitplot as skplt
 import matplotlib
 import matplotlib.pyplot as plt
+print("Imported")
 
 def shuffle_array(array):
    np.random.shuffle(array)
@@ -39,12 +40,17 @@ def separate_classes(database):
    training_preproc_neg = np.array([x for x in database if x[0] == 0])
    training_preproc_pos = np.array([x for x in database if x[0] == 1])
    
+   print("classe 1: " + str(training_preproc_pos.shape))
+   print("classe 2: " + str(training_preproc_neg.shape))
+   
    end_time=datetime.datetime.now()
    print("Separation time taken - {}".format(end_time-start_time))
    return (training_preproc_pos, training_preproc_neg)
 
 def replicate_shuffle_merge(major_class_samples, minor_class_samples):
    start_time=datetime.datetime.now()
+   
+   
    
    prop = major_class_samples.shape[0] // minor_class_samples.shape[0]
    training_neg = np.tile(minor_class_samples, (prop,1))
@@ -56,6 +62,9 @@ def replicate_shuffle_merge(major_class_samples, minor_class_samples):
    shuffle_array(training_neg)
    dataset = np.concatenate((training_neg, major_class_samples), axis = 0)
    shuffle_array(dataset)
+   
+   print("classe 1: " + str(major_class_samples.shape))
+   print("classe 2: " + str(training_neg.shape))
    
    end_time=datetime.datetime.now()
    print("Shuffle time taken - {}".format(end_time-start_time))
@@ -84,14 +93,16 @@ def separate_train_test_eval(X, Y):
 def normalize(train, test, val):
    start_time=datetime.datetime.now()
    
-   scaler = StandardScaler()
+   scaler = MaxAbsScaler()
+   #scaler = MinMaxScaler()
+   #scaler = StandardScaler()
    X_train = scaler.fit_transform(train)
    X_val = scaler.transform(val)
    X_test = scaler.transform(test)
    
    end_time=datetime.datetime.now()
    print("normalization time taken - {}".format(end_time-start_time))
-   return X_train, X_val, X_test
+   return X_train, X_test, X_val
 
 
 ## Provided utilities functions
@@ -154,3 +165,11 @@ def print_metrics_summary(accuracy, recall, precision, f1, auroc=None, aupr=None
         print("{metric:<18}{value:.4f}".format(metric="AUROC:", value=auroc))
     if aupr is not None:
         print("{metric:<18}{value:.4f}".format(metric="AUPR:", value=aupr))
+
+def print_binary_confusion(y_true, y_pred):
+    tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()
+    print("True Positives: ", tp)
+    print("False Positives: ", fp)
+    print("True Negatives: ", tn)
+    print("False Negatives: ", fn)
+    

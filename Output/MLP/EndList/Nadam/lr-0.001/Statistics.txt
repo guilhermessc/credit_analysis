@@ -1,0 +1,102 @@
+Executing Nadam Optimizer For Learning Rate: 0.001
+Train on 642871 samples, validate on 186762 samples
+Epoch 1/150
+ - 89s - loss: 0.2309 - acc: 0.6198 - val_loss: 0.2176 - val_acc: 0.6400
+Epoch 2/150
+ - 73s - loss: 0.2227 - acc: 0.6372 - val_loss: 0.2126 - val_acc: 0.6725
+Epoch 3/150
+ - 71s - loss: 0.2184 - acc: 0.6470 - val_loss: 0.2355 - val_acc: 0.6050
+Epoch 4/150
+ - 72s - loss: 0.2111 - acc: 0.6634 - val_loss: 0.2107 - val_acc: 0.6549
+Epoch 5/150
+ - 71s - loss: 0.1975 - acc: 0.6918 - val_loss: 0.1994 - val_acc: 0.6880
+Epoch 6/150
+ - 72s - loss: 0.1777 - acc: 0.7305 - val_loss: 0.1832 - val_acc: 0.7257
+Epoch 7/150
+ - 71s - loss: 0.1557 - acc: 0.7703 - val_loss: 0.1947 - val_acc: 0.7101
+Epoch 8/150
+ - 72s - loss: 0.1338 - acc: 0.8076 - val_loss: 0.1829 - val_acc: 0.7483
+Epoch 9/150
+ - 71s - loss: 0.1149 - acc: 0.8377 - val_loss: 0.1816 - val_acc: 0.7556
+Epoch 10/150
+ - 71s - loss: 0.1002 - acc: 0.8602 - val_loss: 0.1735 - val_acc: 0.7777
+Epoch 11/150
+ - 71s - loss: 0.0889 - acc: 0.8762 - val_loss: 0.1871 - val_acc: 0.7644
+Epoch 12/150
+ - 71s - loss: 0.0806 - acc: 0.8880 - val_loss: 0.2017 - val_acc: 0.7427
+Epoch 13/150
+ - 71s - loss: 0.0740 - acc: 0.8972 - val_loss: 0.1746 - val_acc: 0.7832
+Epoch 14/150
+ - 73s - loss: 0.0690 - acc: 0.9041 - val_loss: 0.1928 - val_acc: 0.7640
+Epoch 15/150
+ - 71s - loss: 0.0648 - acc: 0.9099 - val_loss: 0.1892 - val_acc: 0.7716
+Epoch 16/150
+ - 73s - loss: 0.0618 - acc: 0.9142 - val_loss: 0.1749 - val_acc: 0.7947
+Epoch 17/150
+ - 72s - loss: 0.0594 - acc: 0.9173 - val_loss: 0.1696 - val_acc: 0.8058
+Epoch 18/150
+ - 71s - loss: 0.0572 - acc: 0.9203 - val_loss: 0.1860 - val_acc: 0.7803
+Epoch 19/150
+ - 71s - loss: 0.0553 - acc: 0.9228 - val_loss: 0.1834 - val_acc: 0.7830
+Epoch 20/150
+ - 71s - loss: 0.0539 - acc: 0.9243 - val_loss: 0.1796 - val_acc: 0.7908
+Epoch 21/150
+ - 71s - loss: 0.0524 - acc: 0.9266 - val_loss: 0.1839 - val_acc: 0.7873
+Epoch 22/150
+ - 71s - loss: 0.0513 - acc: 0.9278 - val_loss: 0.1792 - val_acc: 0.7922
+Epoch 23/150
+ - 71s - loss: 0.0504 - acc: 0.9291 - val_loss: 0.1875 - val_acc: 0.7837
+Epoch 24/150
+ - 71s - loss: 0.0494 - acc: 0.9306 - val_loss: 0.1795 - val_acc: 0.7962
+Epoch 25/150
+ - 71s - loss: 0.0487 - acc: 0.9314 - val_loss: 0.1833 - val_acc: 0.7884
+Epoch 26/150
+ - 73s - loss: 0.0480 - acc: 0.9325 - val_loss: 0.1909 - val_acc: 0.7786
+Epoch 27/150
+ - 73s - loss: 0.0472 - acc: 0.9334 - val_loss: 0.1916 - val_acc: 0.7819
+Epoch 28/150
+ - 71s - loss: 0.0468 - acc: 0.9340 - val_loss: 0.1837 - val_acc: 0.7899
+Epoch 29/150
+ - 71s - loss: 0.0466 - acc: 0.9340 - val_loss: 0.2011 - val_acc: 0.7736
+Epoch 30/150
+ - 71s - loss: 0.0462 - acc: 0.9345 - val_loss: 0.2125 - val_acc: 0.7606
+Epoch 31/150
+ - 71s - loss: 0.0454 - acc: 0.9358 - val_loss: 0.2145 - val_acc: 0.7600
+Epoch 32/150
+ - 71s - loss: 0.0452 - acc: 0.9360 - val_loss: 0.2031 - val_acc: 0.7671
+Epoch 33/150
+ - 71s - loss: 0.0449 - acc: 0.9364 - val_loss: 0.1982 - val_acc: 0.7757
+Epoch 34/150
+ - 71s - loss: 0.0447 - acc: 0.9366 - val_loss: 0.1786 - val_acc: 0.7996
+Epoch 35/150
+ - 71s - loss: 0.0444 - acc: 0.9371 - val_loss: 0.1849 - val_acc: 0.7933
+Epoch 36/150
+ - 71s - loss: 0.0439 - acc: 0.9375 - val_loss: 0.1821 - val_acc: 0.7927
+Epoch 37/150
+ - 71s - loss: 0.0439 - acc: 0.9378 - val_loss: 0.1859 - val_acc: 0.7938
+Epoch 38/150
+ - 71s - loss: 0.0438 - acc: 0.9374 - val_loss: 0.1875 - val_acc: 0.7920
+Epoch 39/150
+ - 74s - loss: 0.0437 - acc: 0.9379 - val_loss: 0.1816 - val_acc: 0.8005
+Epoch 40/150
+ - 72s - loss: 0.0433 - acc: 0.9382 - val_loss: 0.1908 - val_acc: 0.7905
+Epoch 41/150
+ - 72s - loss: 0.0431 - acc: 0.9387 - val_loss: 0.1939 - val_acc: 0.7832
+Epoch 42/150
+ - 71s - loss: 0.0427 - acc: 0.9392 - val_loss: 0.1919 - val_acc: 0.7871
+
+
+Matriz de confusão no conjunto de teste:
+[[  4661  21366]
+ [ 18635 143943]]
+
+Train Loss:       0.0594
+Validation Loss:  0.1696
+
+Performance no conjunto de teste:
+Accuracy:         0.7879
+Recall:           0.8854
+Precision:        0.8708
+F1:               0.8780
+AUROC:            0.5760
+AUPR:             0.8894

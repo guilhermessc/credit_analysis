@@ -1,0 +1,27 @@
+Trained with 378.991 samples.
+
+Validation Set Analysis (186.762 samples):
+Accuracy:         1.0000
+Recall:           1.0000
+Precision:        1.0000
+F1:               1.0000
+AUROC:            1.0000
+AUPR:             1.0000
+
+True Positives:  160501
+False Positives:  8
+True Negatives:  26253
+False Negatives:  0
+
+Out of Time Set Analysis (135.463 samples):
+Accuracy:         0.9997
+Recall:           1.0000
+Precision:        0.9996
+F1:               0.9998
+AUROC:            1.0000
+AUPR:             1.0000
+
+True Positives:  114982
+False Positives:  42
+True Negatives:  20439
+False Negatives:  0

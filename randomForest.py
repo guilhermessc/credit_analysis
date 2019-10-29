@@ -53,18 +53,94 @@ X_train, y_train, X_test, y_test, X_val, y_val = (db_train[:, :-1], db_train[:, 
                                                   db_test[:, :-1], db_test[:, -1],
                                                   db_val[:, :-1], db_val[:, -1])
 """
-training_data = Utils.load_database('data/BASE-PREPROCESSED(TRAIN).gz', sep = '\t' )
-training_data = training_data[:, :-1]
-X, Y = Utils.get_input_output(training_data)
-X_train, y_train, X_test, y_test, X_val, y_val = Utils.separate_train_test_eval(X, Y)
+#%%
+training_data = Utils.load_database('data/BASE-PREPROCESSED(TRAIN).gz', sep = '\t')
+training_data = training_data[:, :-5]
+#training_data = training_data[:, :-1]
+
+"""
+training_data = np.delete(training_data, range(1, training_data.shape[1] - 1), 1)
+print(training_data.shape)
+x = training_data[:, -1]
+print("X: ", x.shape)
+y = training_data[:, 0].reshape(training_data.shape[0], 1)
+del training_data
+x = np.array([k.strip('][').split(',') for k in x]).astype(float)[:, :-4]
+training_data = np.concatenate((y, x), axis= 1)
+del x, y
+"""
+
+X_train, y_train = Utils.get_input_output(training_data)
+#X_train, y_train, X_test, y_test, X_val, y_val = Utils.separate_train_test_eval(X, Y)
+
+
+del training_data
 
 print(X_train[0:6,:])
 print(y_train[0:6])
 input_dim = X_train.shape[1]
 
-rf_clf = RandomForestClassifier(n_estimators = 500)  # Modifique aqui os hyperparâmetros
-rf_clf.fit(X_train, y_train)
+rf_clf = RandomForestClassifier(n_estimators = 50)  # Modifique aqui os hyperparâmetros
+print("Fitting")
+rf_clf.fit(X_train, list(y_train))
+del X_train, y_train
+print("Validation Set Analysis:")
+
+#%%
+
+training_data = Utils.load_database('data/BASE-PREPROCESSED(VALIDACAO).gz', sep = '\t')
+training_data = training_data[:, :-2]
+#training_data = training_data[:, :-1]
+
+"""
+training_data = np.delete(training_data, range(1, training_data.shape[1] - 1), 1)
+print(training_data.shape)
+x = training_data[:, -1]
+print("X: ", x.shape)
+y = training_data[:, 0].reshape(training_data.shape[0], 1)
+del training_data
+x = np.array([k.strip('][').split(',') for k in x]).astype(float)[:, :-1]
+training_data = np.concatenate((y, x), axis= 1)
+del x, y
+"""
+
+X_val, y_val = Utils.get_input_output(training_data)
+
+del training_data
+
 rf_pred_class = rf_clf.predict(X_val)
 rf_pred_scores = rf_clf.predict_proba(X_val)
-accuracy, recall, precision, f1, auroc, aupr = Utils.compute_performance_metrics(y_val, rf_pred_class, rf_pred_scores)
+accuracy, recall, precision, f1, auroc, aupr = Utils.compute_performance_metrics(list(y_val), rf_pred_class, rf_pred_scores)
 Utils.print_metrics_summary(accuracy, recall, precision, f1, auroc, aupr)
+Utils.print_binary_confusion(list(y_val), rf_pred_class)
+del X_val, y_val
+
+
+#%%
+print("Out of Time Set Analysis:")
+training_data = Utils.load_database('data/BASE-PREPROCESSED(OOT).gz', sep = '\t')
+training_data = training_data[:, :-1]
+#training_data = training_data[:, :-1]
+
+"""
+training_data = np.delete(training_data, range(1, training_data.shape[1] - 1), 1)
+print(training_data.shape)
+x = training_data[:, -1]
+print("X: ", x.shape)
+y = training_data[:, 0].reshape(training_data.shape[0], 1)
+del training_data
+x = np.array([k.strip('][').split(',') for k in x]).astype(float)
+training_data = np.concatenate((y, x), axis= 1)
+del x, y
+"""
+
+X_oot, y_oot = Utils.get_input_output(training_data)
+
+del training_data
+
+rf_pred_class = rf_clf.predict(X_oot)
+rf_pred_scores = rf_clf.predict_proba(X_oot)
+accuracy, recall, precision, f1, auroc, aupr = Utils.compute_performance_metrics(list(y_oot), rf_pred_class, rf_pred_scores)
+Utils.print_metrics_summary(accuracy, recall, precision, f1, auroc, aupr)
+Utils.print_binary_confusion(list(y_oot), rf_pred_class)
+#%%

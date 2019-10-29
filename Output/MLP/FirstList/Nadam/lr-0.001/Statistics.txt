@@ -1,0 +1,75 @@
+Executing Nadam Optimizer For Learning Rate: 0.001
+Train on 642871 samples, validate on 186762 samples
+Epoch 1/150
+ - 69s - loss: 0.0011 - acc: 0.9984 - val_loss: 0.0018 - val_acc: 0.9976
+Epoch 2/150
+ - 62s - loss: 9.3429e-06 - acc: 1.0000 - val_loss: 8.8866e-04 - val_acc: 0.9988
+Epoch 3/150
+ - 62s - loss: 9.3333e-06 - acc: 1.0000 - val_loss: 5.1177e-04 - val_acc: 0.9994
+Epoch 4/150
+ - 62s - loss: 0.4481 - acc: 0.5518 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 5/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 6/150
+ - 63s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 7/150
+ - 63s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 8/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 9/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 10/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 11/150
+ - 63s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 12/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 13/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 14/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 15/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 16/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 17/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 18/150
+ - 61s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 19/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 20/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 21/150
+ - 63s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 22/150
+ - 63s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 23/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 24/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 25/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 26/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 27/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+Epoch 28/150
+ - 62s - loss: 0.5433 - acc: 0.4567 - val_loss: 0.8594 - val_acc: 0.1406
+
+Matriz de confusão no conjunto de teste:
+True Positives:  0
+False Positives:  0
+True Negatives:  26027
+False Negatives:  162578
+
+Train Loss:       0.0000
+Validation Loss:  0.0005
+
+Performance no Conjunto de Teste:
+Accuracy:         0.1380
+Recall:           0.0000
+Precision:        0.0000
+F1:               0.0000
+AUROC:            0.4690
+AUPR:             0.8741

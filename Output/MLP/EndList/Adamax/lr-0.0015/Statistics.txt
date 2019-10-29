@@ -1,0 +1,71 @@
+Executing Adamax Optimizer For Learning Rate: 0.0015
+Train on 642871 samples, validate on 186762 samples
+Epoch 1/150
+ - 61s - loss: 0.2305 - acc: 0.6181 - val_loss: 0.2123 - val_acc: 0.6371
+Epoch 2/150
+ - 60s - loss: 0.2237 - acc: 0.6340 - val_loss: 0.1964 - val_acc: 0.7213
+Epoch 3/150
+ - 61s - loss: 0.2209 - acc: 0.6416 - val_loss: 0.2085 - val_acc: 0.6739
+Epoch 4/150
+ - 58s - loss: 0.2178 - acc: 0.6490 - val_loss: 0.2259 - val_acc: 0.6141
+Epoch 5/150
+ - 58s - loss: 0.2137 - acc: 0.6582 - val_loss: 0.1986 - val_acc: 0.6993
+Epoch 6/150
+ - 58s - loss: 0.2079 - acc: 0.6714 - val_loss: 0.2143 - val_acc: 0.6438
+Epoch 7/150
+ - 58s - loss: 0.1998 - acc: 0.6894 - val_loss: 0.1998 - val_acc: 0.6958
+Epoch 8/150
+ - 58s - loss: 0.1896 - acc: 0.7098 - val_loss: 0.2131 - val_acc: 0.6540
+Epoch 9/150
+ - 58s - loss: 0.1773 - acc: 0.7342 - val_loss: 0.2174 - val_acc: 0.6525
+Epoch 10/150
+ - 58s - loss: 0.1636 - acc: 0.7612 - val_loss: 0.2375 - val_acc: 0.6262
+Epoch 11/150
+ - 58s - loss: 0.1489 - acc: 0.7873 - val_loss: 0.2298 - val_acc: 0.6386
+Epoch 12/150
+ - 58s - loss: 0.1347 - acc: 0.8119 - val_loss: 0.2474 - val_acc: 0.6285
+Epoch 13/150
+ - 59s - loss: 0.1209 - acc: 0.8350 - val_loss: 0.2254 - val_acc: 0.6765
+Epoch 14/150
+ - 58s - loss: 0.1083 - acc: 0.8550 - val_loss: 0.2506 - val_acc: 0.6453
+Epoch 15/150
+ - 58s - loss: 0.0970 - acc: 0.8720 - val_loss: 0.2482 - val_acc: 0.6590
+Epoch 16/150
+ - 58s - loss: 0.0873 - acc: 0.8863 - val_loss: 0.2608 - val_acc: 0.6451
+Epoch 17/150
+ - 58s - loss: 0.0788 - acc: 0.8982 - val_loss: 0.2498 - val_acc: 0.6683
+Epoch 18/150
+ - 61s - loss: 0.0717 - acc: 0.9082 - val_loss: 0.2692 - val_acc: 0.6472
+Epoch 19/150
+ - 58s - loss: 0.0656 - acc: 0.9163 - val_loss: 0.2438 - val_acc: 0.6859
+Epoch 20/150
+ - 58s - loss: 0.0606 - acc: 0.9226 - val_loss: 0.2590 - val_acc: 0.6678
+Epoch 21/150
+ - 60s - loss: 0.0564 - acc: 0.9281 - val_loss: 0.2583 - val_acc: 0.6730
+Epoch 22/150
+ - 59s - loss: 0.0527 - acc: 0.9328 - val_loss: 0.2493 - val_acc: 0.6875
+Epoch 23/150
+ - 59s - loss: 0.0497 - acc: 0.9362 - val_loss: 0.2692 - val_acc: 0.6654
+Epoch 24/150
+ - 59s - loss: 0.0472 - acc: 0.9393 - val_loss: 0.2648 - val_acc: 0.6714
+Epoch 25/150
+ - 59s - loss: 0.0450 - acc: 0.9419 - val_loss: 0.2573 - val_acc: 0.6842
+Epoch 26/150
+ - 59s - loss: 0.0431 - acc: 0.9442 - val_loss: 0.2479 - val_acc: 0.6980
+Epoch 27/150
+ - 59s - loss: 0.0415 - acc: 0.9460 - val_loss: 0.2466 - val_acc: 0.6998
+
+Matriz de confusão no conjunto de teste:
+[[  6184  19843]
+ [ 34062 128516]]
+
+Train Loss:       0.2237
+Validation Loss:  0.1964
+
+Performance no conjunto de teste:
+Accuracy:         0.7142
+Recall:           0.7905
+Precision:        0.8663
+F1:               0.8266
+AUROC:            0.5345
+AUPR:             0.8793
